@@ -80,6 +80,9 @@
           <el-carousel-item>
             <DailyChart/>
           </el-carousel-item>
+          <el-carousel-item>
+            <PredictChart/>
+          </el-carousel-item>
         </el-carousel>
       </el-main>
       <el-footer> </el-footer>
@@ -100,6 +103,7 @@ import ScatterChart from "@/components/ScatterChart";
 import DeathChart from '@/components/DeathChart';
 import AllNumberChart from '@/components/AllNumberChart';
 import DailyChart from '@/components/DailyIncreaseChart'
+import PredictChart from "@/components/PredictChart";
 
 export default {
   name: "PandemicChart",
@@ -110,7 +114,8 @@ export default {
     ScatterChart,
     DeathChart,
     AllNumberChart,
-    DailyChart
+    DailyChart,
+    PredictChart
   },
   data() {
     return {
@@ -123,7 +128,7 @@ export default {
       mapData: [],
       dayList: {},
       chartIndex: 0,
-      chartsTitle: ["确诊人数", "治愈人数", "死亡人数", "新增确诊人数", "疫情各项数据雷达图", "亚洲病例每日新增人数"],
+      chartsTitle: ["确诊人数", "治愈人数", "死亡人数", "新增确诊人数", "疫情各项数据雷达图", "亚洲病例每日新增人数", "疫情趋势预测"],
     };
   },
 
